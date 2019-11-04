@@ -1,4 +1,3 @@
-#include "ofApp.h"
 #include <iostream> 
 #include <complex>  
 #include <vector> 
@@ -12,10 +11,8 @@ int n_x = 400; double h_x = 0.01; double x_f = x_0 + h_x * n_x;
 int n_y = 400; double h_y = 0.01; double y_f = y_0 + h_y * n_y;
 int n_t = 3500; double h_t = 0.000005; 
 double pi = M_PI; complex<double> i(0, 1); complex<double> zero(0, 0);
-vector<vector<complex<double>>> F(n_x);
-vector<vector<complex<double>>> A(n_x);
-vector<vector<complex<double>>> B(n_x);
-vector<vector<complex<double>>> C(n_x);
+vector<vector<complex<double>>> F(n_x);vector<vector<complex<double>>> A(n_x);
+vector<vector<complex<double>>> B(n_x);vector<vector<complex<double>>> C(n_x);
 
 double V(const double& x1, const double& y1)
 {
@@ -63,10 +60,8 @@ complex<float> Schrodinger(vector<vector<complex<double>>>& F1, vector<vector<co
 
 	for (int n = 0; n < n_t; n++)
 	{
-		vector<vector<complex<double>>> F2(F1.size());
-		vector<vector<complex<double>>> A2(A1.size());
-		vector<vector<complex<double>>> B2(B1.size());
-		vector<vector<complex<double>>> C2(C1.size());
+		vector<vector<complex<double>>> F2(F1.size()); vector<vector<complex<double>>> A2(A1.size());
+		vector<vector<complex<double>>> B2(B1.size()); vector<vector<complex<double>>> C2(C1.size());
 
 		F2[0] = boundary;
 		F2[n_x - 1] = boundary;
@@ -169,7 +164,8 @@ complex<float> Schrodinger(vector<vector<complex<double>>>& F1, vector<vector<co
 	}
 }
 
-int main() {
+int main() 
+{	
 	for (int k = 0; k < n_x; k++)
 	{
 		vector<complex<double>> row(n_y);
@@ -250,3 +246,4 @@ int main() {
 		C[k] = row;
 	}
 	Schrodinger(F, A, B, C);
+}
