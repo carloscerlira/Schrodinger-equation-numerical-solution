@@ -5,5 +5,5 @@ The program was tested in a case of interest: the double slit experiment, an int
 observed in the lab experiment was found:  
 ![Imgur Image](https://imgur.com/CkuyFCc.png)
 # Documentation
-* In the main.pdf file contains a brief explanation of the problem and details about the implementation.  
+* The main.pdf file contains a brief explanation of the problem and details about the implementation.  
 * In the main.cpp file you can find the program
