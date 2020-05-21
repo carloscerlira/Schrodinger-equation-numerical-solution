@@ -7,4 +7,4 @@ observed in a lab experiment was found:
 # Documentation
 * The paper.pdf file contains a brief explanation of the problem and details about the implementation as well as the 
 results obtained for the double slit experiment.  
-* In the main.cpp file you can find the program
+* In the solution.cpp file you can find the program
